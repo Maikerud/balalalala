@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contact-info">
+        <div class="contact-details">
+            <span class="contact-name">Contact Name</span>
+            <span class="contact-number">+62 818-0685-4747</span>
+        </div>
+        <div class="contact-icons">
+            <span class="icon phone-icon">&#x260E;</span>
+            <span class="icon search-icon" onclick="toggleSearchInput()">&#x1F50D;</span>
+        </div>
+        <input type="text" id="searchInput" placeholder="Search chat..." class="search-input">
+    </div>
+    <div class="chat-container">
+        <div id="chatBox" class="chat-box"></div>
+        <div id="dateHeader"></div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

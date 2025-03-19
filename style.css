@@ -1,0 +1,132 @@
+body { 
+    font-family: Arial, sans-serif; 
+    background-color: #e5ddd5; 
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    flex-direction: column; /* Changed to column to accommodate contact info */
+    align-items: center; 
+    height: 100vh; 
+}
+.contact-info {
+    width: 90%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.contact-details {
+    display: flex;
+    flex-direction: column;
+}
+.contact-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+.contact-number {
+    font-size: 14px;
+    color: #555;
+}
+.contact-icons {
+    display: flex;
+    gap: 10px;
+}
+.icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+.search-input {
+    display: none;
+    width: 100%;
+    max-width: 200px;
+    padding: 5px;
+    margin-left: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.search-input.visible {
+    display: block;
+}
+.chat-container { 
+    width: 90%; 
+    max-width: 600px; 
+    margin: 20px auto; 
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+    display: flex; 
+    flex-direction: column; 
+    height: 80vh; /* Adjusted to accommodate contact info */
+    position: relative; /* Added for positioning the date header */
+}
+.message { 
+    padding: 10px 15px; 
+    border-radius: 20px; 
+    margin: 5px 10px; 
+    max-width: 70%; 
+    word-wrap: break-word; 
+    font-size: 14px; 
+    position: relative; /* Added for positioning the time */
+}
+.sender { 
+    background: #dcf8c6; 
+    align-self: flex-end; 
+}
+.receiver { 
+    background: #ffffff; 
+    border: 1px solid #ddd; 
+    align-self: flex-start; 
+}
+.chat-box { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 5px; 
+    padding: 10px; 
+    flex-grow: 1; 
+    overflow-y: auto; 
+    position: relative; /* Added for positioning the date header */
+}
+.date-separator {
+    text-align: center;
+    margin: 20px auto;
+    font-size: 16px;
+    color: #555;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    width: 8rem;
+}
+.message small {
+    display: block; /* Make it block to take full width */
+    text-align: right; /* Align text to the right */
+    font-size: 12px; /* Smaller font size */
+    color: #999; /* Lighter color */
+    margin-top: 5px; /* Space above the time */
+}
+#dateHeader {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #555;
+    display: none;
+    z-index: 1000;
+}
+#dateHeader.show {
+    display: block;
+    opacity: 1; /* Show state */
+}
+.message.highlight {
+    background-color: yellow; /* Highlight color */
+}
